@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Travel Pulse — Clone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site">
+      <!-- HEADER -->
+      <header class="site-header">
+        <div class="brand">
+          <img src="images/icon/logo_nho.png" alt="logo" class="logo" />
+        </div>
+        <nav class="main-nav">
+          <a href="#">Destination</a>
+          <a href="#">Stories</a>
+          <a href="#">Reviews</a>
+        </nav>
+        <div class="header-actions">
+          <img
+            src="images/icon/tim_kiem_trang.png"
+            class="header-icon"
+            alt="search"
+          />
+          <button class="btn signup">Sign Up</button>
+          <button class="btn login">Login</button>
+        </div>
+      </header>
+
+      <!-- HERO BANNER -->
+      <section class="hero">
+        <img src="images/banner/banner.png" alt="banner" class="hero-img" />
+        <div class="overlay"></div>
+        <div class="hero-text">
+          <h1>
+            Discovering the wonders of our planet, one adventure at a time
+          </h1>
+        </div>
+      </section>
+      <!-- SEARCH AREA (bên dưới banner) -->
+      <div class="search-container">
+        <!-- Search Box -->
+        <div class="search-box">
+          <input
+            type="text"
+            placeholder="Search for places, hotels or restaurants"
+          />
+          <button>
+            <img src="images/icon/tim_kiem_xanh.png" alt="Search" />
+          </button>
+        </div>
+        <!-- Filter & Sort -->
+        <div class="filter-sort">
+          <div class="filter-item">
+            <label>Filter by type of place</label>
+            <select>
+              <option>All Types</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <label>Sort by</label>
+            <select>
+              <option>Most Popular</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="card">
+          <img src="images/12anh/asian_china.png" alt="China" />
+          <div class="info">
+            <p class="continent">Asia</p>
+            <h3 class="country">China</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/12anh/africa_namibia.png" alt="Namibia" />
+          <div class="info">
+            <p class="continent">Africa</p>
+            <h3 class="country">Namibia</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/12anh/australia_victoria.png" alt="Victoria" />
+          <div class="info">
+            <p class="continent">Australia</p>
+            <h3 class="country">Victoria</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/12anh/europe_Denmark.png" alt="Denmark" />
+          <div class="info">
+            <p class="continent">Europe</p>
+            <h3 class="country">Denmark</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="images/12anh/caribbean_dominicanRepublic.png"
+            alt="Dominican Republic"
+          />
+          <div class="info">
+            <p class="continent">Caribbean</p>
+            <h3 class="country">Dominican Republic</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/12anh/canada_ontario.png" alt="Ontario" />
+          <div class="info">
+            <p class="continent">Canada</p>
+            <h3 class="country">Ontario</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/12anh/africa_nigeria.png" alt="Nigeria" />
+          <div class="info">
+            <p class="continent">Africa</p>
+            <h3 class="country">Nigeria</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/12anh/europe_greece.png" alt="Greece" />
+          <div class="info">
+            <p class="continent">Europe</p>
+            <h3 class="country">Greece</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/12anh/asian_japan.png" alt="Japan" />
+          <div class="info">
+            <p class="continent">Asia</p>
+            <h3 class="country">Japan</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/12anh/southAmerica_brail.png" alt="Brazil" />
+          <div class="info">
+            <p class="continent">South America</p>
+            <h3 class="country">Brazil</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/12anh/northAmerica_hawaii.png" alt="Hawaii" />
+          <div class="info">
+            <p class="continent">North America</p>
+            <h3 class="country">Hawaii</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/12anh/middleEast_jordan.png" alt="Jordan" />
+          <div class="info">
+            <p class="continent">Middle East</p>
+            <h3 class="country">Jordan</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <ul>
+          <li><a href="#">&lt;</a></li>
+          <li><a class="active" href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">50</a></li>
+          <li><a href="#">&gt;</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <img src="images/icon/logo_lon.png" alt="Travel Pulse Logo" class="footer-logo" />
+    <p>© 2023 Travel Pulse. All rights reserved</p>
+  </div>
+</footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
