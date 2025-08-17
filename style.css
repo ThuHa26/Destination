@@ -155,7 +155,8 @@ body {
   width: 20px;
   height: 20px;
   object-fit: contain;
-} /* Bộ lọc và sắp xếp */
+}
+/* Bộ lọc và sắp xếp */
 .filter-sort {
   display: flex;
   gap: 2rem;
@@ -174,11 +175,12 @@ body {
   color: #555;
 }
 .filter-item select {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
   border: 1px solid #ddd;
   border-radius: 999px;
   background: white;
   font-size: 0.95rem;
+  line-height: 1.5;
   outline: none;
   cursor: pointer;
 }
@@ -368,33 +370,18 @@ body {
     max-width: 500px;
   }
 }
-
-/* Responsive cho mobile */
 @media (max-width: 768px) {
   .header {
-    grid-template-columns: 1fr; /* chỉ còn 1 cột */
-    text-align: center;
-    padding: 10px 20px;
+    flex-wrap: wrap; /* Cho phép item xuống dòng thay vì đè lên nhau */
   }
-
-  .logo {
-    justify-self: center; /* logo căn giữa */
-    margin-bottom: 10px;
-  }
-
-  .main-nav {
-    justify-self: center;
-    margin-bottom: 10px;
-  }
-
-  .main-nav a {
-    margin: 0 10px; /* thu hẹp khoảng cách chữ */
-    display: inline-block;
-  }
-
-  .right-header {
-    justify-self: center; /* căn giữa Sign up + Login */
+  .nav {
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .login-btn {
+    margin-top: 10px;
   }
 }
