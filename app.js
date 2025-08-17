@@ -1,31 +1,48 @@
-document.addEventListener('DOMContentLoaded', function(){
-  // Search simple: filter by data-title
-  const searchInput = document.getElementById('search');
-  const cards = Array.from(document.querySelectorAll('.card'));
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("search");
+  const searchBtn = document.getElementById("searchBtn");
+  const cards = Array.from(document.querySelectorAll(".card"));
 
-  document.getElementById('searchBtn').addEventListener('click', function(){
+  const lightbox = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lbImg");
+  const lbCaption = document.getElementById("lbCaption");
+  const lbClose = document.getElementById("lbClose");
+
+  // Hàm search
+  function doSearch() {
     const q = searchInput.value.trim().toLowerCase();
-    cards.forEach(c => {
-      const t = (c.getAttribute('data-title')||'').toLowerCase();
-      c.style.display = t.includes(q) ? '' : 'none';
+    cards.forEach((c) => {
+      const t = (c.dataset.title || "").toLowerCase();
+      c.style.display = !q || t.includes(q) ? "" : "none";
     });
+  }
+
+  // Search khi bấm nút
+  searchBtn.addEventListener("click", doSearch);
+
+  // Search khi nhấn Enter
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") doSearch();
   });
 
-  // Hover handled by CSS; click opens lightbox
-  const lightbox = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lbImg');
-  const lbCaption = document.getElementById('lbCaption');
-  const lbClose = document.getElementById('lbClose');
-
-  cards.forEach(c=>{
-    c.addEventListener('click', ()=>{
-      const img = c.querySelector('img');
+  // Mở lightbox khi click card
+  cards.forEach((c) => {
+    c.addEventListener("click", () => {
+      const img = c.querySelector("img");
       lbImg.src = img.src;
-      lbCaption.textContent = c.getAttribute('data-title') || '';
-      lightbox.classList.remove('hidden');
+      lbCaption.textContent = c.dataset.title || "";
+      lightbox.classList.remove("hidden");
     });
   });
 
-  lbClose.addEventListener('click', ()=> lightbox.classList.add('hidden'));
-  lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) lightbox.classList.add('hidden') });
+  // Đóng lightbox
+  lbClose.addEventListener("click", () => lightbox.classList.add("hidden"));
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) lightbox.classList.add("hidden");
+  });
+
+  // Đóng bằng phím Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") lightbox.classList.add("hidden");
+  });
 });

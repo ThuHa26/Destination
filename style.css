@@ -305,6 +305,13 @@ body {
   .gallery {
     grid-template-columns: 1fr;
   }
+  .logo {
+    height: 48px;
+  }
+  .lb-close {
+    right: 10px;
+    top: 10px;
+  }
 }
 
 /* lightbox */
@@ -347,22 +354,47 @@ body {
   font-weight: 600;
   text-align: center;
 }
+
 @media (max-width: 900px) {
   .card img {
     height: 220px;
+    object-fit: cover;
   }
   .hero-text h1 {
     font-size: 28px;
   }
   .search-box {
-    width: 86%;
+    width: 100%;
+    max-width: 500px;
   }
 }
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(1, 1fr);
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .header {
+    grid-template-columns: 1fr; /* chỉ còn 1 cột */
+    text-align: center;
+    padding: 10px 20px;
   }
+
   .logo {
-    height: 48px;
+    justify-self: center; /* logo căn giữa */
+    margin-bottom: 10px;
+  }
+
+  .main-nav {
+    justify-self: center;
+    margin-bottom: 10px;
+  }
+
+  .main-nav a {
+    margin: 0 10px; /* thu hẹp khoảng cách chữ */
+    display: inline-block;
+  }
+
+  .right-header {
+    justify-self: center; /* căn giữa Sign up + Login */
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
